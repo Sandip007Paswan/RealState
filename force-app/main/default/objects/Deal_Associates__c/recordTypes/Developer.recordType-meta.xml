@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Developer</fullName>
+    <active>false</active>
+    <label>Developer</label>
+    <picklistValues>
+        <picklist>Access_Level__c</picklist>
+        <values>
+            <fullName>Read</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Read%5Cwrite</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Access_c__c</picklist>
+        <values>
+            <fullName>Read</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Read%5Cwrite</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fee_Type__c</picklist>
+        <values>
+            <fullName>Flat Fee%28%24%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Percentage%28%25%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fee_Type_or__c</picklist>
+        <values>
+            <fullName>Flat Fee%28%24%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Percentage%28%25%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Project_Roles__c</picklist>
+        <values>
+            <fullName>Project Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Team member</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Role__c</picklist>
+        <values>
+            <fullName>Co Broker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Broker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project Coordinator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

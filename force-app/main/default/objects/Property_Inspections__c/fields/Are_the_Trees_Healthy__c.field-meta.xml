@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Are_the_Trees_Healthy__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Are the Trees Healthy? Do any branches hang too close to the roof?</inlineHelpText>
+    <label>Are the Trees Healthy?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

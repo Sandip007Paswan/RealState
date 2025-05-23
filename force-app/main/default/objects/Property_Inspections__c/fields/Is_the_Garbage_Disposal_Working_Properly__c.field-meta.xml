@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_the_Garbage_Disposal_Working_Properly__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Is the Garbage Disposal Working Properly?</inlineHelpText>
+    <label>Is the Garbage Disposal Working Properly</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

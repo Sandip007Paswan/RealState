@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Object_Name_Field_Api__c</fullName>
+    <inlineHelpText>Query Parent Object Name Field Api</inlineHelpText>
+    <label>Parent Object Name Field Api</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

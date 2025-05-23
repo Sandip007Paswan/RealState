@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Are_Gutters_and_Downspouts__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Are Gutters and Downspouts Firmly Attached.</inlineHelpText>
+    <label>Are Gutters and Downspouts ?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

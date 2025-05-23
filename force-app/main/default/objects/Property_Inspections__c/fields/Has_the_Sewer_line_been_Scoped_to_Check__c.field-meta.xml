@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_the_Sewer_line_been_Scoped_to_Check__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Has the sewer line been scoped to check for potential cracks?</inlineHelpText>
+    <label>Has the Sewer line been Scoped to Check</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

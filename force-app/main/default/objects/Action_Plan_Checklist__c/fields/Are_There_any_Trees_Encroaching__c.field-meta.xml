@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Are_There_any_Trees_Encroaching__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Are there any trees encroaching on the foundation?</inlineHelpText>
+    <label>Are There any Trees Encroaching?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

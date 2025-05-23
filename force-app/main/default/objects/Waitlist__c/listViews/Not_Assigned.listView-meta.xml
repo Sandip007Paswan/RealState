@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_Assigned</fullName>
+    <columns>NAME</columns>
+    <columns>Agent__c</columns>
+    <columns>Listing__c</columns>
+    <columns>Assigned__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Agent__c</field>
+        <operation>contains</operation>
+        <value>Ralph</value>
+    </filters>
+    <filters>
+        <field>Assigned__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Not Assigned</label>
+</ListView>

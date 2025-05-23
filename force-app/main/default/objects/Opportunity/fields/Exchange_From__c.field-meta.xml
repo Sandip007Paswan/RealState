@@ -1,0 +1,996 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exchange_From__c</fullName>
+    <label>Exchange From</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Afghanistan (AFN)</fullName>
+                <default>false</default>
+                <label>Afghanistan (AFN)</label>
+            </value>
+            <value>
+                <fullName>Albania (ALL)</fullName>
+                <default>false</default>
+                <label>Albania (ALL)</label>
+            </value>
+            <value>
+                <fullName>Algeria (DZD)</fullName>
+                <default>false</default>
+                <label>Algeria (DZD)</label>
+            </value>
+            <value>
+                <fullName>Andorra (EUR)</fullName>
+                <default>false</default>
+                <label>Andorra (EUR)</label>
+            </value>
+            <value>
+                <fullName>Angola (AOA)</fullName>
+                <default>false</default>
+                <label>Angola (AOA)</label>
+            </value>
+            <value>
+                <fullName>Antigua and Barbuda (XCD)</fullName>
+                <default>false</default>
+                <label>Antigua and Barbuda (XCD)</label>
+            </value>
+            <value>
+                <fullName>Argentina (ARS)</fullName>
+                <default>false</default>
+                <label>Argentina (ARS)</label>
+            </value>
+            <value>
+                <fullName>Armenia (AMD)</fullName>
+                <default>false</default>
+                <label>Armenia (AMD)</label>
+            </value>
+            <value>
+                <fullName>Australia (AUD)</fullName>
+                <default>false</default>
+                <label>Australia (AUD)</label>
+            </value>
+            <value>
+                <fullName>Austria (EUR)</fullName>
+                <default>false</default>
+                <label>Austria (EUR)</label>
+            </value>
+            <value>
+                <fullName>Azerbaijan (AZN)</fullName>
+                <default>false</default>
+                <label>Azerbaijan (AZN)</label>
+            </value>
+            <value>
+                <fullName>Bahamas (BSD)</fullName>
+                <default>false</default>
+                <label>Bahamas (BSD)</label>
+            </value>
+            <value>
+                <fullName>Bahrain (BHD)</fullName>
+                <default>false</default>
+                <label>Bahrain (BHD)</label>
+            </value>
+            <value>
+                <fullName>Bangladesh (BDT)</fullName>
+                <default>false</default>
+                <label>Bangladesh (BDT)</label>
+            </value>
+            <value>
+                <fullName>Barbados (BBD)</fullName>
+                <default>false</default>
+                <label>Barbados (BBD)</label>
+            </value>
+            <value>
+                <fullName>Belarus (BYN)</fullName>
+                <default>false</default>
+                <label>Belarus (BYN)</label>
+            </value>
+            <value>
+                <fullName>Belgium (EUR)</fullName>
+                <default>false</default>
+                <label>Belgium (EUR)</label>
+            </value>
+            <value>
+                <fullName>Belize (BZD)</fullName>
+                <default>false</default>
+                <label>Belize (BZD)</label>
+            </value>
+            <value>
+                <fullName>Benin (XOF)</fullName>
+                <default>false</default>
+                <label>Benin (XOF)</label>
+            </value>
+            <value>
+                <fullName>Bhutan (BTN)</fullName>
+                <default>false</default>
+                <label>Bhutan (BTN)</label>
+            </value>
+            <value>
+                <fullName>Bolivia (BOB)</fullName>
+                <default>false</default>
+                <label>Bolivia (BOB)</label>
+            </value>
+            <value>
+                <fullName>Bosnia and Herzegovina (BAM)</fullName>
+                <default>false</default>
+                <label>Bosnia and Herzegovina (BAM)</label>
+            </value>
+            <value>
+                <fullName>Botswana (BWP)</fullName>
+                <default>false</default>
+                <label>Botswana (BWP)</label>
+            </value>
+            <value>
+                <fullName>Brazil (BRL)</fullName>
+                <default>false</default>
+                <label>Brazil (BRL)</label>
+            </value>
+            <value>
+                <fullName>Brunei (BND)</fullName>
+                <default>false</default>
+                <label>Brunei (BND)</label>
+            </value>
+            <value>
+                <fullName>Bulgaria (BGN)</fullName>
+                <default>false</default>
+                <label>Bulgaria (BGN)</label>
+            </value>
+            <value>
+                <fullName>Burkina Faso (XOF)</fullName>
+                <default>false</default>
+                <label>Burkina Faso (XOF)</label>
+            </value>
+            <value>
+                <fullName>Burundi (BIF)</fullName>
+                <default>false</default>
+                <label>Burundi (BIF)</label>
+            </value>
+            <value>
+                <fullName>Cambodia (KHR)</fullName>
+                <default>false</default>
+                <label>Cambodia (KHR)</label>
+            </value>
+            <value>
+                <fullName>Cameroon (XAF)</fullName>
+                <default>false</default>
+                <label>Cameroon (XAF)</label>
+            </value>
+            <value>
+                <fullName>Canada (CAD)</fullName>
+                <default>false</default>
+                <label>Canada (CAD)</label>
+            </value>
+            <value>
+                <fullName>Cape Verde (CVE)</fullName>
+                <default>false</default>
+                <label>Cape Verde (CVE)</label>
+            </value>
+            <value>
+                <fullName>Central African Republic (XAF)</fullName>
+                <default>false</default>
+                <label>Central African Republic (XAF)</label>
+            </value>
+            <value>
+                <fullName>Chad (XAF)</fullName>
+                <default>false</default>
+                <label>Chad (XAF)</label>
+            </value>
+            <value>
+                <fullName>Chile (CLP)</fullName>
+                <default>false</default>
+                <label>Chile (CLP)</label>
+            </value>
+            <value>
+                <fullName>China (CNY)</fullName>
+                <default>false</default>
+                <label>China (CNY)</label>
+            </value>
+            <value>
+                <fullName>Colombia (COP)</fullName>
+                <default>false</default>
+                <label>Colombia (COP)</label>
+            </value>
+            <value>
+                <fullName>Comoros (KMF)</fullName>
+                <default>false</default>
+                <label>Comoros (KMF)</label>
+            </value>
+            <value>
+                <fullName>Costa Rica (CRC)</fullName>
+                <default>false</default>
+                <label>Costa Rica (CRC)</label>
+            </value>
+            <value>
+                <fullName>Croatia (HRK)</fullName>
+                <default>false</default>
+                <label>Croatia (HRK)</label>
+            </value>
+            <value>
+                <fullName>Cuba (CUP)</fullName>
+                <default>false</default>
+                <label>Cuba (CUP)</label>
+            </value>
+            <value>
+                <fullName>Cyprus (EUR)</fullName>
+                <default>false</default>
+                <label>Cyprus (EUR)</label>
+            </value>
+            <value>
+                <fullName>Czech Republic (CZK)</fullName>
+                <default>false</default>
+                <label>Czech Republic (CZK)</label>
+            </value>
+            <value>
+                <fullName>Democratic Republic of Congo (CDF)</fullName>
+                <default>false</default>
+                <label>Democratic Republic of Congo (CDF)</label>
+            </value>
+            <value>
+                <fullName>Denmark (DKK)</fullName>
+                <default>false</default>
+                <label>Denmark (DKK)</label>
+            </value>
+            <value>
+                <fullName>Djibouti (DJF)</fullName>
+                <default>false</default>
+                <label>Djibouti (DJF)</label>
+            </value>
+            <value>
+                <fullName>Dominica (XCD)</fullName>
+                <default>false</default>
+                <label>Dominica (XCD)</label>
+            </value>
+            <value>
+                <fullName>Dominican Republic (DOP)</fullName>
+                <default>false</default>
+                <label>Dominican Republic (DOP)</label>
+            </value>
+            <value>
+                <fullName>East Timor (USD)</fullName>
+                <default>false</default>
+                <label>East Timor (USD)</label>
+            </value>
+            <value>
+                <fullName>Ecuador (USD)</fullName>
+                <default>false</default>
+                <label>Ecuador (USD)</label>
+            </value>
+            <value>
+                <fullName>El Salvador (USD)</fullName>
+                <default>false</default>
+                <label>El Salvador (USD)</label>
+            </value>
+            <value>
+                <fullName>Equatorial Guinea (XAF)</fullName>
+                <default>false</default>
+                <label>Equatorial Guinea (XAF)</label>
+            </value>
+            <value>
+                <fullName>Eritrea (ERN)</fullName>
+                <default>false</default>
+                <label>Eritrea (ERN)</label>
+            </value>
+            <value>
+                <fullName>Estonia (EUR)</fullName>
+                <default>false</default>
+                <label>Estonia (EUR)</label>
+            </value>
+            <value>
+                <fullName>Eswatini (SZL)</fullName>
+                <default>false</default>
+                <label>Eswatini (SZL)</label>
+            </value>
+            <value>
+                <fullName>Ethiopia (ETB)</fullName>
+                <default>false</default>
+                <label>Ethiopia (ETB)</label>
+            </value>
+            <value>
+                <fullName>Fiji (FJD)</fullName>
+                <default>false</default>
+                <label>Fiji (FJD)</label>
+            </value>
+            <value>
+                <fullName>Finland (EUR)</fullName>
+                <default>false</default>
+                <label>Finland (EUR)</label>
+            </value>
+            <value>
+                <fullName>France (EUR)</fullName>
+                <default>false</default>
+                <label>France (EUR)</label>
+            </value>
+            <value>
+                <fullName>Gabon (XAF)</fullName>
+                <default>false</default>
+                <label>Gabon (XAF)</label>
+            </value>
+            <value>
+                <fullName>Gambia (GMD)</fullName>
+                <default>false</default>
+                <label>Gambia (GMD)</label>
+            </value>
+            <value>
+                <fullName>Georgia (GEL)</fullName>
+                <default>false</default>
+                <label>Georgia (GEL)</label>
+            </value>
+            <value>
+                <fullName>Germany (EUR)</fullName>
+                <default>false</default>
+                <label>Germany (EUR)</label>
+            </value>
+            <value>
+                <fullName>Ghana (GHS)</fullName>
+                <default>false</default>
+                <label>Ghana (GHS)</label>
+            </value>
+            <value>
+                <fullName>Greece (EUR)</fullName>
+                <default>false</default>
+                <label>Greece (EUR)</label>
+            </value>
+            <value>
+                <fullName>Grenada (XCD)</fullName>
+                <default>false</default>
+                <label>Grenada (XCD)</label>
+            </value>
+            <value>
+                <fullName>Guatemala (GTQ)</fullName>
+                <default>false</default>
+                <label>Guatemala (GTQ)</label>
+            </value>
+            <value>
+                <fullName>Guinea (GNF)</fullName>
+                <default>false</default>
+                <label>Guinea (GNF)</label>
+            </value>
+            <value>
+                <fullName>Guinea-Bissau (XOF)</fullName>
+                <default>false</default>
+                <label>Guinea-Bissau (XOF)</label>
+            </value>
+            <value>
+                <fullName>Guyana (GYD)</fullName>
+                <default>false</default>
+                <label>Guyana (GYD)</label>
+            </value>
+            <value>
+                <fullName>Haiti (HTG)</fullName>
+                <default>false</default>
+                <label>Haiti (HTG)</label>
+            </value>
+            <value>
+                <fullName>Honduras (HNL)</fullName>
+                <default>false</default>
+                <label>Honduras (HNL)</label>
+            </value>
+            <value>
+                <fullName>Hungary (HUF)</fullName>
+                <default>false</default>
+                <label>Hungary (HUF)</label>
+            </value>
+            <value>
+                <fullName>Iceland (ISK)</fullName>
+                <default>false</default>
+                <label>Iceland (ISK)</label>
+            </value>
+            <value>
+                <fullName>India (INR)</fullName>
+                <default>false</default>
+                <label>India (INR)</label>
+            </value>
+            <value>
+                <fullName>Indonesia (IDR)</fullName>
+                <default>false</default>
+                <label>Indonesia (IDR)</label>
+            </value>
+            <value>
+                <fullName>Iran (IRR)</fullName>
+                <default>false</default>
+                <label>Iran (IRR)</label>
+            </value>
+            <value>
+                <fullName>Iraq (IQD)</fullName>
+                <default>false</default>
+                <label>Iraq (IQD)</label>
+            </value>
+            <value>
+                <fullName>Ireland (EUR)</fullName>
+                <default>false</default>
+                <label>Ireland (EUR)</label>
+            </value>
+            <value>
+                <fullName>Israel (ILS)</fullName>
+                <default>false</default>
+                <label>Israel (ILS)</label>
+            </value>
+            <value>
+                <fullName>Italy (EUR)</fullName>
+                <default>false</default>
+                <label>Italy (EUR)</label>
+            </value>
+            <value>
+                <fullName>Ivory Coast (XOF)</fullName>
+                <default>false</default>
+                <label>Ivory Coast (XOF)</label>
+            </value>
+            <value>
+                <fullName>Jamaica (JMD)</fullName>
+                <default>false</default>
+                <label>Jamaica (JMD)</label>
+            </value>
+            <value>
+                <fullName>Japan (JPY)</fullName>
+                <default>false</default>
+                <label>Japan (JPY)</label>
+            </value>
+            <value>
+                <fullName>Jordan (JOD)</fullName>
+                <default>false</default>
+                <label>Jordan (JOD)</label>
+            </value>
+            <value>
+                <fullName>Kazakhstan (KZT)</fullName>
+                <default>false</default>
+                <label>Kazakhstan (KZT)</label>
+            </value>
+            <value>
+                <fullName>Kenya (KES)</fullName>
+                <default>false</default>
+                <label>Kenya (KES)</label>
+            </value>
+            <value>
+                <fullName>Kiribati (AUD)</fullName>
+                <default>false</default>
+                <label>Kiribati (AUD)</label>
+            </value>
+            <value>
+                <fullName>Korea, North (KPW)</fullName>
+                <default>false</default>
+                <label>Korea, North (KPW)</label>
+            </value>
+            <value>
+                <fullName>Korea, South (KRW)</fullName>
+                <default>false</default>
+                <label>Korea, South (KRW)</label>
+            </value>
+            <value>
+                <fullName>Kosovo (EUR)</fullName>
+                <default>false</default>
+                <label>Kosovo (EUR)</label>
+            </value>
+            <value>
+                <fullName>Kuwait (KWD)</fullName>
+                <default>false</default>
+                <label>Kuwait (KWD)</label>
+            </value>
+            <value>
+                <fullName>Kyrgyzstan (KGS)</fullName>
+                <default>false</default>
+                <label>Kyrgyzstan (KGS)</label>
+            </value>
+            <value>
+                <fullName>Laos (LAK)</fullName>
+                <default>false</default>
+                <label>Laos (LAK)</label>
+            </value>
+            <value>
+                <fullName>Latvia (EUR)</fullName>
+                <default>false</default>
+                <label>Latvia (EUR)</label>
+            </value>
+            <value>
+                <fullName>Lebanon (LBP)</fullName>
+                <default>false</default>
+                <label>Lebanon (LBP)</label>
+            </value>
+            <value>
+                <fullName>Lesotho (LSL)</fullName>
+                <default>false</default>
+                <label>Lesotho (LSL)</label>
+            </value>
+            <value>
+                <fullName>Liberia (LRD)</fullName>
+                <default>false</default>
+                <label>Liberia (LRD)</label>
+            </value>
+            <value>
+                <fullName>Libya (LYD)</fullName>
+                <default>false</default>
+                <label>Libya (LYD)</label>
+            </value>
+            <value>
+                <fullName>Liechtenstein (CHF)</fullName>
+                <default>false</default>
+                <label>Liechtenstein (CHF)</label>
+            </value>
+            <value>
+                <fullName>Lithuania (EUR)</fullName>
+                <default>false</default>
+                <label>Lithuania (EUR)</label>
+            </value>
+            <value>
+                <fullName>Luxembourg (EUR)</fullName>
+                <default>false</default>
+                <label>Luxembourg (EUR)</label>
+            </value>
+            <value>
+                <fullName>Madagascar (MGA)</fullName>
+                <default>false</default>
+                <label>Madagascar (MGA)</label>
+            </value>
+            <value>
+                <fullName>Malawi (MWK)</fullName>
+                <default>false</default>
+                <label>Malawi (MWK)</label>
+            </value>
+            <value>
+                <fullName>Malaysia (MYR)</fullName>
+                <default>false</default>
+                <label>Malaysia (MYR)</label>
+            </value>
+            <value>
+                <fullName>Maldives (MVR)</fullName>
+                <default>false</default>
+                <label>Maldives (MVR)</label>
+            </value>
+            <value>
+                <fullName>Mali (XOF)</fullName>
+                <default>false</default>
+                <label>Mali (XOF)</label>
+            </value>
+            <value>
+                <fullName>Malta (EUR)</fullName>
+                <default>false</default>
+                <label>Malta (EUR)</label>
+            </value>
+            <value>
+                <fullName>Marshall Islands (USD)</fullName>
+                <default>false</default>
+                <label>Marshall Islands (USD)</label>
+            </value>
+            <value>
+                <fullName>Mauritania (MRO)</fullName>
+                <default>false</default>
+                <label>Mauritania (MRO)</label>
+            </value>
+            <value>
+                <fullName>Mauritius (MUR)</fullName>
+                <default>false</default>
+                <label>Mauritius (MUR)</label>
+            </value>
+            <value>
+                <fullName>Mexico (MXN)</fullName>
+                <default>false</default>
+                <label>Mexico (MXN)</label>
+            </value>
+            <value>
+                <fullName>Micronesia (USD)</fullName>
+                <default>false</default>
+                <label>Micronesia (USD)</label>
+            </value>
+            <value>
+                <fullName>Moldova (MDL)</fullName>
+                <default>false</default>
+                <label>Moldova (MDL)</label>
+            </value>
+            <value>
+                <fullName>Monaco (EUR)</fullName>
+                <default>false</default>
+                <label>Monaco (EUR)</label>
+            </value>
+            <value>
+                <fullName>Mongolia (MNT)</fullName>
+                <default>false</default>
+                <label>Mongolia (MNT)</label>
+            </value>
+            <value>
+                <fullName>Montenegro (EUR)</fullName>
+                <default>false</default>
+                <label>Montenegro (EUR)</label>
+            </value>
+            <value>
+                <fullName>Morocco (MAD)</fullName>
+                <default>false</default>
+                <label>Morocco (MAD)</label>
+            </value>
+            <value>
+                <fullName>Mozambique (MZN)</fullName>
+                <default>false</default>
+                <label>Mozambique (MZN)</label>
+            </value>
+            <value>
+                <fullName>Myanmar (MMK)</fullName>
+                <default>false</default>
+                <label>Myanmar (MMK)</label>
+            </value>
+            <value>
+                <fullName>Namibia (NAD)</fullName>
+                <default>false</default>
+                <label>Namibia (NAD)</label>
+            </value>
+            <value>
+                <fullName>Nauru (AUD)</fullName>
+                <default>false</default>
+                <label>Nauru (AUD)</label>
+            </value>
+            <value>
+                <fullName>Nepal (NPR)</fullName>
+                <default>false</default>
+                <label>Nepal (NPR)</label>
+            </value>
+            <value>
+                <fullName>Netherlands (EUR)</fullName>
+                <default>false</default>
+                <label>Netherlands (EUR)</label>
+            </value>
+            <value>
+                <fullName>New Zealand (NZD)</fullName>
+                <default>false</default>
+                <label>New Zealand (NZD)</label>
+            </value>
+            <value>
+                <fullName>Nicaragua (NIO)</fullName>
+                <default>false</default>
+                <label>Nicaragua (NIO)</label>
+            </value>
+            <value>
+                <fullName>Niger (XOF)</fullName>
+                <default>false</default>
+                <label>Niger (XOF)</label>
+            </value>
+            <value>
+                <fullName>Nigeria (NGN)</fullName>
+                <default>false</default>
+                <label>Nigeria (NGN)</label>
+            </value>
+            <value>
+                <fullName>North Macedonia (MKD)</fullName>
+                <default>false</default>
+                <label>North Macedonia (MKD)</label>
+            </value>
+            <value>
+                <fullName>Norway (NOK)</fullName>
+                <default>false</default>
+                <label>Norway (NOK)</label>
+            </value>
+            <value>
+                <fullName>Oman (OMR)</fullName>
+                <default>false</default>
+                <label>Oman (OMR)</label>
+            </value>
+            <value>
+                <fullName>Pakistan (PKR)</fullName>
+                <default>false</default>
+                <label>Pakistan (PKR)</label>
+            </value>
+            <value>
+                <fullName>Palau (USD)</fullName>
+                <default>false</default>
+                <label>Palau (USD)</label>
+            </value>
+            <value>
+                <fullName>Palestine (ILS)</fullName>
+                <default>false</default>
+                <label>Palestine (ILS)</label>
+            </value>
+            <value>
+                <fullName>Panama (PAB)</fullName>
+                <default>false</default>
+                <label>Panama (PAB)</label>
+            </value>
+            <value>
+                <fullName>Papua New Guinea (PGK)</fullName>
+                <default>false</default>
+                <label>Papua New Guinea (PGK)</label>
+            </value>
+            <value>
+                <fullName>Paraguay (PYG)</fullName>
+                <default>false</default>
+                <label>Paraguay (PYG)</label>
+            </value>
+            <value>
+                <fullName>Peru (PEN)</fullName>
+                <default>false</default>
+                <label>Peru (PEN)</label>
+            </value>
+            <value>
+                <fullName>Philippines (PHP)</fullName>
+                <default>false</default>
+                <label>Philippines (PHP)</label>
+            </value>
+            <value>
+                <fullName>Poland (PLN)</fullName>
+                <default>false</default>
+                <label>Poland (PLN)</label>
+            </value>
+            <value>
+                <fullName>Portugal (EUR)</fullName>
+                <default>false</default>
+                <label>Portugal (EUR)</label>
+            </value>
+            <value>
+                <fullName>Qatar (QAR)</fullName>
+                <default>false</default>
+                <label>Qatar (QAR)</label>
+            </value>
+            <value>
+                <fullName>Republic of the Congo (XAF)</fullName>
+                <default>false</default>
+                <label>Republic of the Congo (XAF)</label>
+            </value>
+            <value>
+                <fullName>Romania (RON)</fullName>
+                <default>false</default>
+                <label>Romania (RON)</label>
+            </value>
+            <value>
+                <fullName>Russia (RUB)</fullName>
+                <default>false</default>
+                <label>Russia (RUB)</label>
+            </value>
+            <value>
+                <fullName>Rwanda (RWF)</fullName>
+                <default>false</default>
+                <label>Rwanda (RWF)</label>
+            </value>
+            <value>
+                <fullName>Saint Kitts and Nevis (XCD)</fullName>
+                <default>false</default>
+                <label>Saint Kitts and Nevis (XCD)</label>
+            </value>
+            <value>
+                <fullName>Saint Lucia (XCD)</fullName>
+                <default>false</default>
+                <label>Saint Lucia (XCD)</label>
+            </value>
+            <value>
+                <fullName>Saint Vincent and the Grenadines (XCD)</fullName>
+                <default>false</default>
+                <label>Saint Vincent and the Grenadines (XCD)</label>
+            </value>
+            <value>
+                <fullName>Samoa (WST)</fullName>
+                <default>false</default>
+                <label>Samoa (WST)</label>
+            </value>
+            <value>
+                <fullName>San Marino (EUR)</fullName>
+                <default>false</default>
+                <label>San Marino (EUR)</label>
+            </value>
+            <value>
+                <fullName>São Tomé and Príncipe (STD)</fullName>
+                <default>false</default>
+                <label>São Tomé and Príncipe (STD)</label>
+            </value>
+            <value>
+                <fullName>Saudi Arabia (SAR)</fullName>
+                <default>false</default>
+                <label>Saudi Arabia (SAR)</label>
+            </value>
+            <value>
+                <fullName>Senegal (XOF)</fullName>
+                <default>false</default>
+                <label>Senegal (XOF)</label>
+            </value>
+            <value>
+                <fullName>Serbia (RSD)</fullName>
+                <default>false</default>
+                <label>Serbia (RSD)</label>
+            </value>
+            <value>
+                <fullName>Seychelles (SCR)</fullName>
+                <default>false</default>
+                <label>Seychelles (SCR)</label>
+            </value>
+            <value>
+                <fullName>Sierra Leone (SLL)</fullName>
+                <default>false</default>
+                <label>Sierra Leone (SLL)</label>
+            </value>
+            <value>
+                <fullName>Singapore (SGD)</fullName>
+                <default>false</default>
+                <label>Singapore (SGD)</label>
+            </value>
+            <value>
+                <fullName>Slovakia (EUR)</fullName>
+                <default>false</default>
+                <label>Slovakia (EUR)</label>
+            </value>
+            <value>
+                <fullName>Slovenia (EUR)</fullName>
+                <default>false</default>
+                <label>Slovenia (EUR)</label>
+            </value>
+            <value>
+                <fullName>Solomon Islands (SBD)</fullName>
+                <default>false</default>
+                <label>Solomon Islands (SBD)</label>
+            </value>
+            <value>
+                <fullName>Somalia (SOS)</fullName>
+                <default>false</default>
+                <label>Somalia (SOS)</label>
+            </value>
+            <value>
+                <fullName>South Africa (ZAR)</fullName>
+                <default>false</default>
+                <label>South Africa (ZAR)</label>
+            </value>
+            <value>
+                <fullName>South Sudan (SSP)</fullName>
+                <default>false</default>
+                <label>South Sudan (SSP)</label>
+            </value>
+            <value>
+                <fullName>Spain (EUR)</fullName>
+                <default>false</default>
+                <label>Spain (EUR)</label>
+            </value>
+            <value>
+                <fullName>Sri Lanka (LKR)</fullName>
+                <default>false</default>
+                <label>Sri Lanka (LKR)</label>
+            </value>
+            <value>
+                <fullName>Sudan (SDG)</fullName>
+                <default>false</default>
+                <label>Sudan (SDG)</label>
+            </value>
+            <value>
+                <fullName>Suriname (SRD)</fullName>
+                <default>false</default>
+                <label>Suriname (SRD)</label>
+            </value>
+            <value>
+                <fullName>Sweden (SEK)</fullName>
+                <default>false</default>
+                <label>Sweden (SEK)</label>
+            </value>
+            <value>
+                <fullName>Switzerland (CHF)</fullName>
+                <default>false</default>
+                <label>Switzerland (CHF)</label>
+            </value>
+            <value>
+                <fullName>Syria (SYP)</fullName>
+                <default>false</default>
+                <label>Syria (SYP)</label>
+            </value>
+            <value>
+                <fullName>Taiwan (TWD)</fullName>
+                <default>false</default>
+                <label>Taiwan (TWD)</label>
+            </value>
+            <value>
+                <fullName>Tajikistan (TJS)</fullName>
+                <default>false</default>
+                <label>Tajikistan (TJS)</label>
+            </value>
+            <value>
+                <fullName>Tanzania (TZS)</fullName>
+                <default>false</default>
+                <label>Tanzania (TZS)</label>
+            </value>
+            <value>
+                <fullName>Thailand (THB)</fullName>
+                <default>false</default>
+                <label>Thailand (THB)</label>
+            </value>
+            <value>
+                <fullName>Togo (XOF)</fullName>
+                <default>false</default>
+                <label>Togo (XOF)</label>
+            </value>
+            <value>
+                <fullName>Tonga (TOP)</fullName>
+                <default>false</default>
+                <label>Tonga (TOP)</label>
+            </value>
+            <value>
+                <fullName>Trinidad and Tobago (TTD)</fullName>
+                <default>false</default>
+                <label>Trinidad and Tobago (TTD)</label>
+            </value>
+            <value>
+                <fullName>Tunisia (TND)</fullName>
+                <default>false</default>
+                <label>Tunisia (TND)</label>
+            </value>
+            <value>
+                <fullName>Turkey (TRY)</fullName>
+                <default>false</default>
+                <label>Turkey (TRY)</label>
+            </value>
+            <value>
+                <fullName>Turkmenistan (TMT)</fullName>
+                <default>false</default>
+                <label>Turkmenistan (TMT)</label>
+            </value>
+            <value>
+                <fullName>Tuvalu (AUD)</fullName>
+                <default>false</default>
+                <label>Tuvalu (AUD)</label>
+            </value>
+            <value>
+                <fullName>Uganda (UGX)</fullName>
+                <default>false</default>
+                <label>Uganda (UGX)</label>
+            </value>
+            <value>
+                <fullName>Ukraine (UAH)</fullName>
+                <default>false</default>
+                <label>Ukraine (UAH)</label>
+            </value>
+            <value>
+                <fullName>United Arab Emirates (AED)</fullName>
+                <default>false</default>
+                <label>United Arab Emirates (AED)</label>
+            </value>
+            <value>
+                <fullName>United Kingdom (GBP)</fullName>
+                <default>false</default>
+                <label>United Kingdom (GBP)</label>
+            </value>
+            <value>
+                <fullName>United States (USD)</fullName>
+                <default>true</default>
+                <label>United States (USD)</label>
+            </value>
+            <value>
+                <fullName>Uruguay (UYU)</fullName>
+                <default>false</default>
+                <label>Uruguay (UYU)</label>
+            </value>
+            <value>
+                <fullName>Uzbekistan (UZS)</fullName>
+                <default>false</default>
+                <label>Uzbekistan (UZS)</label>
+            </value>
+            <value>
+                <fullName>Vanuatu (VUV)</fullName>
+                <default>false</default>
+                <label>Vanuatu (VUV)</label>
+            </value>
+            <value>
+                <fullName>Vatican City (EUR)</fullName>
+                <default>false</default>
+                <label>Vatican City (EUR)</label>
+            </value>
+            <value>
+                <fullName>Venezuela (VEF)</fullName>
+                <default>false</default>
+                <label>Venezuela (VEF)</label>
+            </value>
+            <value>
+                <fullName>Vietnam (VND)</fullName>
+                <default>false</default>
+                <label>Vietnam (VND)</label>
+            </value>
+            <value>
+                <fullName>Yemen (YER)</fullName>
+                <default>false</default>
+                <label>Yemen (YER)</label>
+            </value>
+            <value>
+                <fullName>Zambia (ZMW)</fullName>
+                <default>false</default>
+                <label>Zambia (ZMW)</label>
+            </value>
+            <value>
+                <fullName>Zimbabwe (USD)</fullName>
+                <default>false</default>
+                <label>Zimbabwe (USD)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

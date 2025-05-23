@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Ceilings_and_around_Window__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Check the Ceilings and around the Window and pipes in each room for evidence of leaks.</inlineHelpText>
+    <label>Check Ceilings and around Window ?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>
