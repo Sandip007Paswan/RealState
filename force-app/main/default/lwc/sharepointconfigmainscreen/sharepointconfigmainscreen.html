@@ -1,0 +1,83 @@
+<template>
+    <div class="slds-grid slds-wrap " style="background: white;">
+        <div class="slds-col slds-size_2-of-12  slds-border_right " style="height:600px;max-height:600px;">
+            <div class="slds-grid slds-grid_vertical ">
+                <div class="slds-col slds-align_absolute-center">
+                    <div class="slds-var-p-around_small slds-border_bottom">
+                        <img style="max-height: 110px" alt="SharePoint" src={sharepointlogo}/>
+                    </div> 
+                </div>
+                <div class="slds-col slds-align_absolute-center">
+                    <div class="slds-var-p-around_small">
+                        <div class=" slds-text-heading_small ">SETUP AND CONFIG</div>
+                    </div>   
+                </div>
+                
+                <div class="slds-col">
+                    <nav class="slds-nav-vertical" aria-label="Sub page">
+                        <div class="slds-nav-vertical__section">
+                          <h2 id="entity-header" class="slds-nav-vertical__title"></h2>
+                          <ul aria-describedby="entity-header">
+                            <li class={tab1}>
+                               <a href="#" class="slds-nav-vertical__action" onclick={sharepointconfig} >SharePoint Config</a>
+                            </li>
+                            <li class={tab2}>
+                               <a href="#" class="slds-nav-vertical__action" onclick={sfconfig} >File Storage Config</a>
+                            </li>
+                          </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="slds-col slds-size_10-of-12">
+            <template lwc:if={text}>
+                <div class="slds-page-header">
+                    <div class="slds-page-header__row">
+                        <div class="slds-page-header__col-title">
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <span class="slds-icon_container slds-icon-standard-opportunity" title={title}>
+                                        <lightning-icon icon-name={icon} title={title}></lightning-icon>
+                                        <span class="slds-assistive-text">{title}</span>
+                                    </span>
+                                </div>
+                                <div class="slds-media__body">
+                                    <div class="slds-page-header__name">
+                                        <div class="slds-page-header__name-title">
+                                            <h1>
+                                                <span class="slds-page-header__title slds-truncate" title="Setup">Setup</span>
+                                            </h1>
+                                        </div>
+                                    </div>
+                                    <p class="slds-page-header__name-meta">{text}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <template lwc:if={tab2check}>
+                            <div class="slds-page-header__col-actions">
+                                <div class="slds-page-header__controls">
+                                    <div class="slds-page-header__control">
+                                        <ul class="slds-button-group-list">
+                                            <li>
+                                                <button class="slds-button slds-button_neutral" onclick={newscreen} >New</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </template>
+            <template lwc:if={tab1check}>
+                <c-sharepointconfiglwc  ></c-sharepointconfiglwc>
+            </template>
+            <template lwc:if={tab2check}>
+                <div class="slds-var-p-around_small slds-scrollable_x" style="width:100%;">
+                    <c-sharepointfolderconfiglwc></c-sharepointfolderconfiglwc>
+                </div>  
+            </template>
+        </div>
+    </div>
+</template>

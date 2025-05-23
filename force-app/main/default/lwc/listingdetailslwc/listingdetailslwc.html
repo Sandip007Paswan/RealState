@@ -1,0 +1,78 @@
+<template>
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_2-of-12 slds-small-size--1-of-2 slds-medium-size--1-of-1 slds-p-top_x-large slds-p-left_small">
+            <!--<lightning-icon icon-name='action:back' alternative-text='back' size='xx-small' title='back' onclick={navigateToFiles}></lightning-icon>-->
+            <a target="#" onclick={navigateToFiles} >Go back</a>
+        </div>
+        <div class="slds-col slds-size_10-of-12 slds-small-size--1-of-2 slds-medium-size--3-of-4 slds-align_absolute-center">
+            <div style="width:800px;" class="slds-box">
+                <div class="slds-grid slds-wrap">
+                    <div style="display: block;text-align:center;" class="slds-col slds-size_1-of-5 slds-small-size--1-of-2 slds-medium-size--3-of-4 slds-align_absolute-center">
+                        <div class="pointer">
+                            <lightning-icon onclick={openagentenquiryflow} icon-name='standard:swarm_request' alternative-text='swarm_request' size='small' title='Contact an Agent'></lightning-icon>
+                        </div>
+                        <div class="pointer"> Contact an Agent </div>
+                    </div>
+                    <div style="display: block;text-align:center;" class="slds-col slds-size_1-of-5 slds-small-size--1-of-2 slds-medium-size--3-of-4 slds-align_absolute-center">
+                        <div class="pointer" >
+                            <lightning-icon onclick={openschedulemeetingflow} icon-name='utility:meet_focus_presenter' alternative-text='meet_focus_presenter' size='small' title='Request a meeting'></lightning-icon>
+                        </div>
+                        <div class="pointer" onclick={openschedulemeetingflow}>Request a meeting</div>
+                    </div>
+                    <div style="display: block;text-align:center;" class="slds-col slds-size_1-of-5 slds-small-size--1-of-2 slds-medium-size--3-of-4 slds-align_absolute-center">
+                        <div class="pointer">
+                        <lightning-icon icon-name='utility:email' alternative-text='email' size='small' title='Email'></lightning-icon>
+                        </div>
+                        <div class="pointer">Email a Friend</div>
+                    </div>
+                    <div style="display: block;text-align:center;" class="slds-col slds-size_1-of-5 slds-small-size--1-of-2 slds-medium-size--3-of-4 slds-align_absolute-center">
+                        <div class="pointer">
+                        <lightning-icon icon-name='doctype:box_notes' alternative-text='box_notes' size='small' title='Add Notes'></lightning-icon>
+                        </div> 
+                        <div class="pointer">Add Notes</div>
+                    </div>
+                    <div style="display: block;text-align:center;" class="slds-col slds-size_1-of-5 slds-small-size--1-of-2 slds-medium-size--3-of-4 slds-align_absolute-center">
+                        <div class="pointer">
+                        <lightning-icon icon-name='utility:print' alternative-text='print' size='small' title='print'></lightning-icon>
+                        </div>
+                        <div class="pointer">Print Details</div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-1 slds-small-size--1-of-2 slds-medium-size--3-of-4 slds-p-top_large slds-align_absolute-center slds-text-heading_large">
+            <template lwc:if={details}>
+                {details.Property__r.Name}
+            </template>
+        </div>
+    </div>
+
+    <div class="slds-grid slds-wrap">
+        <div style="display: block;text-align:center;" class="slds-col slds-size_4-of-12 slds-small-size--1-of-2 slds-medium-size--3-of-4 slds-p-top_large slds-align_absolute-center">
+            <template lwc:if={details}>
+                <template lwc:if={details.Property_Images__r}>
+                    <img src={imageUrl} alt="User Image" height="250px" width="400px"/>
+                </template> 
+                <div class="slds-grid slds-wrap">
+                    <template for:each={details.Property_Images__r} for:item="cd">
+                    
+                        <div  key={cd.Id} class=" pointer slds-col slds-size_2-of-12 slds-small-size--1-of-2 slds-medium-size--3-of-4 slds-p-top_large slds-align_absolute-center">
+                            <img onclick={selectedImg} data-id={cd.Property_Image_URL__c} src={cd.Property_Image_URL__c} alt={cd.Name} height="50px" width="50px"/>
+                        </div>
+                    
+                    </template>
+                </div>
+            </template>
+            
+        </div>
+        <div class="slds-col slds-size_4-of-12 slds-small-size--1-of-2 slds-medium-size--3-of-4 slds-align_absolute-center">
+            <template lwc:if={details}>
+                <p class="slds-text-body_regular slds-var-p-around_large">{details.Description__c}</p>
+            </template>
+        </div>
+    </div>
+
+</template>

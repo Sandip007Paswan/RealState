@@ -1,0 +1,34 @@
+<template>
+    <lightning-modal-body>
+        <lightning-tabset  active-tab-value={activeTab}>
+            <lightning-tab label="Salesforce Files"  value="1" onactive={handleActive}>
+                
+                <div class="slds-var-m-around_small" style="height:420px;">
+                    <template lwc:if={lwcloaded}>
+                        <c-salesforcefilesscreenlwc  onmetadata={metadataMethod}
+                        onfiledetails={filedetailsMethod} record-id={recid}></c-salesforcefilesscreenlwc>
+                    </template>
+                </div>
+            
+            </lightning-tab>
+            <lightning-tab label="SharePoint Files" value="2" title="SharePoint Files" onactive={handleActive}>
+                <div class="slds-var-m-around_small" style="height:420px;">
+                    <template lwc:if={lwcchild}>
+                        <c-sharepointfileslwc  folderurl={folderurl} 
+        metadata={metadata} record-id={recid}></c-sharepointfileslwc>
+                    </template>
+                </div>
+            </lightning-tab>
+        </lightning-tabset>
+        </lightning-modal-body>
+        <lightning-modal-footer>
+            <template lwc:if={lwcchild}>
+                <lightning-button variant="brand" label="Refresh" title="Refresh" onclick={handleRefresh} class="slds-m-left_x-small"></lightning-button>
+            </template>
+            <template lwc:else>
+                <lightning-button variant="brand" label="Refresh" title="Refresh" onclick={handleRefresh1} class="slds-m-left_x-small"></lightning-button>
+            </template>
+            <lightning-button label="Cancel" title="Cancel" onclick={closeRefresh} class="slds-m-left_x-small"></lightning-button>
+            
+        </lightning-modal-footer>
+</template>

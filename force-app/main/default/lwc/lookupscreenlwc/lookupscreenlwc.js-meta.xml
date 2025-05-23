@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+         
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property label="countryId" name="countryId"  type="String" role="outputOnly"/>
+            <property label="stateId" name="stateId" type="String" role="outputOnly"/> 
+            <property label="cityId" name="cityId" type="String" role="outputOnly"/>
+                     
+        </targetConfig>
+    </targetConfigs>
+        
+</LightningComponentBundle>

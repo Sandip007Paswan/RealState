@@ -1,0 +1,160 @@
+<template>
+    <template lwc:if={spinner}>
+        <div id="spinnerId-1" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading...</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </template>
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped" aria-label="Example table of Opportunities with striped rows">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Schema Name">Schema Name</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Query">Query</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Object Name">Object Name</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Is It Parent">Is It Parent</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Parent Object Field Name">Parent Field Name</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Child Object Names">Child Object Names</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Field Name">Field Name</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Sequence">Sequence</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title=""></div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <template if:true={cdList} for:each={cdList} for:item="cd" for:index="index">
+                <tr key={cd.Id} class="slds-hint-parent">
+                    <th scope="row">
+                        <div class="slds-truncate" title={cd.Name}>{cd.Name}</div>
+                    </th>
+                    <th scope="row">
+                        <div class="slds-truncate" title={cd.Query__c}>{cd.Query__c}</div>
+                    </th>
+                    <th scope="row">
+                        <div class="slds-truncate" title={cd.Object_Name__c}>{cd.Object_Name__c}</div>
+                    </th>
+                    <th scope="row">
+                        <div class="slds-truncate" title={cd.Is_It_Parent__c}>
+                            <lightning-input disabled="true" type="checkbox" label="" variant="label-hidden" checked={cd.Is_It_Parent__c}>
+                            </lightning-input>
+                        </div>
+                    </th>
+                    <th scope="row">
+                        <div class="slds-truncate" title={cd.Parent_Object_Name_Field_Api__c}>{cd.Parent_Object_Name_Field_Api__c}</div>
+                    </th>
+                    <th scope="row">
+                        <div class="slds-truncate" title={cd.Child_Object_Names__c}>{cd.Child_Object_Names__c}</div>
+                    </th>
+                    <th scope="row">
+                        <div class="slds-truncate" title={cd.Field_Name__c}>{cd.Field_Name__c}</div>
+                    </th>
+                    <th scope="row">
+                        <div class="slds-truncate" title={cd.Sequence__c}>{cd.Sequence__c}</div>
+                    </th>
+                    <th scope="row">
+                        <lightning-button-menu alternative-text="Show menu"  menu-alignment="auto" onselect={handleOnselect} data-id={cd.Id} >
+                            <lightning-menu-item value="Clone"  label="Clone" icon-name="utility:form" title="Clone" ></lightning-menu-item>
+                            <lightning-menu-item value="Edit"  label="Edit" icon-name="utility:edit_form" title="Edit" ></lightning-menu-item>
+                            <lightning-menu-item value="Delete" label="Delete" icon-name="utility:delete" title="Delete"></lightning-menu-item>
+                        </lightning-button-menu>
+                    </th>
+                </tr>
+            </template>     
+        </tbody>
+    </table>
+
+    <template lwc:if={popup}>
+
+        <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+                <span class="slds-assistive-text">Cancel and close</span>
+                </button>
+                <div class="slds-modal__header">
+                    <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">{popupheading}</h1>
+                </div>
+                <div class="slds-modal__content " id="modal-content-id-1">
+                    <template lwc:if={popspinner}>
+                        <div id="spinnerId" class="slds-spinner_container">
+                            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                                <span class="slds-assistive-text">Loading...</span>
+                                <div class="slds-spinner__dot-a"></div>
+                                <div class="slds-spinner__dot-b"></div>
+                            </div>
+                        </div>
+                    </template>
+                    <lightning-record-edit-form object-api-name="SharePoint_Schema__c" >
+                        <div class="slds-wrap slds-grid">
+                            <div class="slds-col slds-size_1-of-2 slds-p-around_small">
+                                <lightning-input-field field-name="Name" value={recordDetails.Name} onchange={handle1} ></lightning-input-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2 slds-p-around_small">
+                                <lightning-input-field field-name="Parent__c" value={recordDetails.Parent__c} onchange={handle2} ></lightning-input-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2 slds-p-around_small">
+                                <lightning-input-field field-name="Query__c" value={recordDetails.Query__c} onchange={handle3} ></lightning-input-field>
+                            </div>                           
+                            <div class="slds-col slds-size_1-of-2 slds-p-around_small">
+                                <lightning-input-field field-name="Parent_Object_Name_Field_Api__c" onchange={handle4} value={recordDetails.Parent_Object_Name_Field_Api__c} ></lightning-input-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2 slds-p-around_small">
+                                <lightning-input-field field-name="Child_Object_Names__c" onchange={handle5} value={recordDetails.Child_Object_Names__c} ></lightning-input-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2 slds-p-around_small">
+                                <lightning-input-field field-name="Object_Name__c" value={recordDetails.Object_Name__c} onchange={handle6}></lightning-input-field>
+                            </div>
+                            
+                            <div class="slds-col slds-size_1-of-2 slds-p-around_small">
+                                <lightning-input-field field-name="Field_Name__c" value={recordDetails.Field_Name__c} onchange={handle7} ></lightning-input-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2 slds-p-around_small">
+                                <lightning-input-field field-name="Sequence__c" value={recordDetails.Sequence__c} onchange={handle8}></lightning-input-field>
+                            </div>
+                            
+                            <div class="slds-col slds-size_1-of-2 slds-p-around_small">
+                                <lightning-input-field field-name="Is_It_Parent__c" value={recordDetails.Is_It_Parent__c} onchange={handle9}></lightning-input-field>
+                            </div>
+                        </div>
+                        
+                    </lightning-record-edit-form>
+                </div>
+                <div class="slds-modal__footer">
+                    <lightning-button
+                                class="slds-m-top_small"
+                                label="Cancel"
+                                onclick={cancelpopup}
+                            ></lightning-button>&nbsp;
+                            <lightning-button
+                            variant="brand"
+                                class="slds-m-top_small"
+                                type="Save"
+                                label="Save"
+                                onclick={saveData}
+                            ></lightning-button>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+
+    </template>
+
+</template>

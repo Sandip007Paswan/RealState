@@ -1,0 +1,27 @@
+<!-- dynamicRealStateChild.html -->
+<template>
+    <div class="slds-box slds-box_x-small slds-text-align_center">
+      <lightning-carousel if:true={hasImages} disable-auto-scroll>     
+            <template for:each={images} for:item="image">
+                <lightning-carousel-image
+                    key={image}
+                    src={image.Property_Image_URL__c}
+                    alternative-text={image.Name}
+                    header={image.Name}
+                ></lightning-carousel-image>
+            </template>
+      </lightning-carousel>
+      <template if:true={hasImages}>
+        <a target="#" onclick={navigateToFiles} data-id={listing.id}>{listing.name}</a>
+      </template>
+        <template if:false={hasImages}>
+            No images available.
+        </template>
+    </div>
+  <!--  <div class="slds-m-top_small">
+        
+        <p>No_of_Bedrooms: {listing.bedrooms}</p>
+        <p>No_of_Bathrooms: {listing.bathrooms}</p>
+        <p>$: {listing.listingPrice}</p>
+    </div> -->
+</template>

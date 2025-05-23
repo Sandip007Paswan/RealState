@@ -1,0 +1,37 @@
+/* YourComponent.css */
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.trigger-element {
+    cursor: pointer;
+   
+}
+
+.input-fields {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+   
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+  
+}
+
+/* Add styles to show elements when needed */
+.show-dropdown .dropdown-content {
+    display: block;
+}
+
+.show-input .input-fields {
+    display: block;
+}

@@ -1,0 +1,75 @@
+.lazyloaded {
+    opacity: 1;
+    -webkit-transition: opacity 650ms ease;
+    -moz-transition: opacity 650ms ease;
+    -o-transition: opacity 650ms ease;
+    transition: opacity 650ms ease;
+}
+.sldsicon{
+    padding: 0.4rem; 
+    width: auto; 
+    height: auto;
+    border-radius: 50%;
+    --slds-c-icon-color-background : #EBEDF0;
+}
+.foreground{
+   /* background-image: url(https://trailblazer.me/resource/1675304410000/assets/assets/backgrounds/arid-dunes.png);*/
+    background-image: url(https://cdn.xxl.thumbs.canstockphoto.com/comfortable-office-hall-with-reception-desk-and-meeting-glass-room-workplace-and-corporate-concept-stock-image_csp89204460.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 8rem;
+}
+.imgpf1{
+    position: absolute;
+    bottom: 3rem;
+    margin-left: 3rem;
+    height: 2.50rem;
+    width: 9.25rem;
+}
+.imgpf2{
+    background-color: var(--c-colorWhite,rgb(255, 255, 255));
+    background-position: center center;
+    background-size: cover;
+    border: 4px solid var(--c-colorWhite,rgb(128, 128, 128));
+    border-radius: 50%; 
+    height: 8.25rem; 
+    width: 8.15rem;
+    transition: border-color .2s ease;   
+}
+.maindiv{
+    background-color: var(--c-colorWhite,rgb(128, 128, 128));
+    height:32rem;
+}
+.fontstyle{
+    padding-top: 5rem;
+    padding-left: 4.5rem;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+    
+}
+.fs25{
+    font-size:25px;
+    font-family: Monospace;
+}
+.fs20{
+    font-size:22px;
+    color: #FFFFFF;
+}
+.fs18{
+    font-size:17px;
+    color: #FFFFFF;
+    padding-bottom: 1rem;
+    word-wrap: break-word;
+
+}
+.iconcolor{
+    cursor: pointer;
+   
+    --sds-c-icon-color-foreground-default: #cc3333;
+}
+.custom-text-color {
+    color: #FFFFFF;
+     
+}

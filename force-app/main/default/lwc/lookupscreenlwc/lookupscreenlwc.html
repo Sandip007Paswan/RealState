@@ -1,0 +1,14 @@
+<template>
+    
+    <label for="countrySearch">
+        <abbr title="required" class="slds-required">*</abbr>
+        Search by Country:
+    </label>
+    <c-customlookupscreenlwc objectname="Country__c" requiredcheck="true" filtering=false filterst="nochild" eventname="gocountry" ongocountry={countryChange}></c-customlookupscreenlwc>
+    
+    <label for="countrySearch">Search by State:</label>
+    <c-customlookupscreenlwc eventname="gostate" requiredcheck="false" disablecheck={stdisable} ongostate={stateChange} objectname="State__c" parentid={countryId} filtering=true filterst={statedt} filteringfield="Country__c" ></c-customlookupscreenlwc>
+    
+    <label for="countrySearch">Search by City:</label>
+    <c-customlookupscreenlwc eventname="gocity" requiredcheck="false" disablecheck={ctdisable} ongocity={cityChange} objectname="City__c" parentid={stateId} filtering=true filterst={childdt} filteringfield="State__c" ></c-customlookupscreenlwc>
+</template>

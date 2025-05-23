@@ -1,0 +1,72 @@
+<template>
+    
+        <!-- lightning spinner -->
+        <template lwc:if={spinner}>
+            <div id="spinnerId" class="slds-spinner_container">
+                <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                    <span class="slds-assistive-text">Loading...</span>
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+        </template>
+
+        <!-- displaying data -->
+        <!--Component Start-->
+        <template lwc:if={showMessage}>
+            <div class=" slds-text-heading_large slds-text-color_error">The quick brown fox jumps over the lazy dog.</div>
+        </template>
+        <template lwc:else>
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <th class="slds-text-title_caps" scope="col">
+                            <div class="slds-truncate" title="Title">Title</div>
+                        </th>
+                        <th class="slds-text-title_caps" scope="col">
+                            <div class="slds-truncate" title="File Type">File Type</div>
+                        </th>
+                        <th class="slds-text-title_caps" scope="col">
+                            <div class="slds-truncate" title="Created Date">Created Date</div>
+                        </th>
+                        <th class="slds-text-title_caps" scope="col">
+                            
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={cdList} for:item="cd">
+                        <tr key={cd.Title}>
+                            <th scope="row">
+                                <div class="slds-truncate" title={cd.Title}>
+                                    <img style="max-height: 20px" alt="SharePoint" src={sharepointlogo}/>
+                                    <a onclick={navigateToFiles} data-id={cd.publicUrl}>{cd.Title}</a>
+                                </div>
+                            </th>
+                            <th scope="row">
+                                <div class="slds-truncate" title={cd.FileType}>
+                                    {cd.FileType}
+                                </div>
+                            </th>
+                            <th scope="row">
+                                <div class="slds-truncate" title={cd.CreatedDate}>
+                                    <lightning-formatted-date-time value={cd.CreatedDate}></lightning-formatted-date-time>
+                                </div>
+                            </th>
+                            <th scope="row">
+                                <lightning-button-menu alternative-text="Show menu"  menu-alignment="auto" onselect={handleOnselect} data-id={cd.Id} data-title={cd.dowloadUrl}>
+                                    <lightning-menu-item value="Download"  label="Download" icon-name="utility:download" title="Download" ></lightning-menu-item>
+                                    <lightning-menu-item value="Delete" label="Delete" icon-name="utility:delete" title="Delete"></lightning-menu-item>
+                                </lightning-button-menu>
+                            </th>
+                        </tr>
+                    </template>
+                    
+                </tbody>
+            </table>
+        </template>
+        
+    
+
+
+</template>

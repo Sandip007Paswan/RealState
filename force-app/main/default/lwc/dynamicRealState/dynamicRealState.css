@@ -1,0 +1,4 @@
+.scrollable-container {
+    max-height: 535px; /* Set your desired max height */
+    overflow: auto; /* This makes the container scrollable if the content exceeds the height */
+}

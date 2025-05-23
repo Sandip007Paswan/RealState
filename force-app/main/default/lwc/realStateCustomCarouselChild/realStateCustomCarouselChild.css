@@ -1,0 +1,76 @@
+.container{
+    width: 700px;
+    margin: auto;
+}
+.slds_relative {
+    position: relative;
+}
+.text_style {
+    bottom: 0px;
+    position: absolute;
+    color: #daf0f4e6;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+.slds_relative {
+    position: relative;
+}
+
+.slds_prev, .slds_next {
+    position: absolute;
+    top: 32%;
+    width: auto;
+    padding: 10px;
+    color: #fcfcfc;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
+    
+}
+
+.slds_next {
+    border-radius: 3px 0px 0px 3px;
+    right: 0;
+}
+
+.slds_prev:hover,
+.slds_next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+.slds_Number{
+    font-size: 14px;
+    position: absolute;
+    padding: 8px 12px;
+    top: 0;
+    color: #cfe6e6;
+}
+
+.dot{
+    height: 15px;
+    width: 15px;
+    border-radius: 30%;
+    background-color: #383636;
+    margin: 2px 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.active, .dot:hover{
+
+    background-color: #717171;
+
+}
+
+.fade{
+    animation-name:fade ;
+    animation-duration: 1.5s;
+
+}
+@keyframes fade {
+    from{opacity:.4;}
+    to{opacity: 1;}
+}

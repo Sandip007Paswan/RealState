@@ -1,0 +1,19 @@
+<template>
+    <lightning-input
+        label="Search and Select City"
+        value={searchInput}
+        placeholder="Search or Select a City"
+        onchange={handleSearchInputChange}
+    ></lightning-input>
+    <div class="dropdown">
+        <ul class="dropdown-content">
+            <template for:each={filteredCityOptions} for:item="cityOption">
+                <li key={cityOption.value}>
+                    <a href="#" onclick={handleCitySelection} data-value={cityOption.value}>
+                        {cityOption.label}
+                    </a>
+                </li>
+            </template>
+        </ul>
+    </div>
+</template>

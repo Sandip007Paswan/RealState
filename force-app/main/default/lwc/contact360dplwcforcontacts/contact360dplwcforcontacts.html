@@ -1,0 +1,87 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 11-24-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <div class="maindiv lazyloaded">
+
+        <div  class="slds-is-relative foreground"  data-aura-rendered-by="353:0">
+        <div class="imgpf1" data-aura-rendered-by="354:0">
+            <div class="slds-is-relative" id="pdf1"  data-aura-rendered-by="357:0" >
+                <template lwc:if={spinner} >
+                    <div class="imgpf2">
+                        <div class="demo-only demo-only_viewport" style="height:6rem;">
+                            <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+                              <span class="slds-assistive-text">Loading</span>
+                              <div class="slds-spinner__dot-a"></div>
+                              <div class="slds-spinner__dot-b"></div>
+                            </div>
+                          </div>
+                    </div>
+                </template>
+                <template lwc:else >
+                    <img src={backgroundImage} class="imgpf2"></img>
+                </template>
+                <div class="slds-is-absolute" data-aura-rendered-by="370:0" style="right: 1px;bottom: 10px;">
+                    <div class="slds-form-element">
+                        
+                        <div class="slds-form-element__control">
+                            <div class="slds-file-selector slds-file-selector_files">
+                            <div class="">
+                                <input type="file" data-id="file1" class="slds-file-selector__input slds-assistive-text" accept="image/png" id="file-upload-input-107"
+                                 aria-labelledby="file-selector-primary-label-105 file-selector-secondary-label106" onchange={openfileUpload} />
+                                <label class="slds-file-selector__body" for="file-upload-input-107" id="file-selector-secondary-label106">
+                                <span class="">
+                                    <lightning-icon icon-name="utility:photo" alternative-text="Connected" size="small" title="upload image" class="sldsicon">
+                                    </lightning-icon></span>
+                                <!--<span class="slds-file-selector__text slds-medium-show">or Drop Files</span>-->
+                                </label>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+        <div class="fontstyle">
+            <span style="font-size:30px;margin-left: 35%;display: block;margin-top: -67px;">
+                <b><div style="font-weight: 800;" class="fs20" >{names}</div></b>
+                <div style="font-weight: 600;" class="fs18 ">{recordtypevalue}</div>
+            </span>
+        </div>
+            <div class="slds-border_top"></div><br/>
+            <div class="slds-var-p-around_xx-large">
+            
+                
+                 <div class="fs18"><b>Account Name: </b>{accountname}</div>
+                
+                 <div  class="fs18"><b>Phone: </b>{phone}</div>
+              
+                 <div class="fs18"><b>Birthdate: </b>{dateofbirth}</div>
+             
+                 <div class="fs18"><b>Email: </b>{email}</div>
+             
+            
+            
+        
+            
+           <!-- <div class="slds-p-top_medium">
+                <span><lightning-icon icon-name="utility:dialing" alternative-text="Connected" size="xx-small" 
+                    title="Phone" class="iconcolor" > </lightning-icon></span><span class="fs18" style="font-weight: 600;"> {phone}</span>
+            </div>
+            <div >
+                <span><lightning-icon icon-name="utility:email" alternative-text="Connected" size="xx-small" 
+                    title="Email" class="iconcolor"  > </lightning-icon></span><span class="fs18" style="font-weight: 600;"> {email}</span>
+            </div> -->
+            
+        </div>
+
+    </div>
+</template>

@@ -1,0 +1,18 @@
+<template>
+    <div style="background-color:white;">
+        <lightning-carousel if:true={check}>
+            <template for:each={records} for:item="rec">
+                <lightning-carousel-image
+                    key={rec.Id}
+                    src={rec.Property_Image_URL__c.value}
+                    alternative-text={rec.Name.value}
+                    header={rec.Name.value}
+                    description=""
+                ></lightning-carousel-image>
+            </template>
+        </lightning-carousel>
+        <template if:false={check}>
+            No images available.
+        </template>
+    </div>
+</template>

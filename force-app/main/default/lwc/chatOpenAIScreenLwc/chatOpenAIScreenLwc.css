@@ -1,0 +1,19 @@
+.THIS .slds-icon {
+    cursor: pointer;
+}
+.THIS .txt{
+    text-align: center;
+}
+.button {  
+    --sds-c-button-neutral-color-background: #B21807;
+    --sds-c-button-text-color: white;
+    --slds-c-button-inverse-shadow-focus: #B21807;
+    --slds-c-button-shadow: #B21807;
+    --slds-c-button-neutral-shadow-focus: #B21807;
+    --slds-c-button-neutral-color-background-active:#B21807;
+    --slds-c-button-neutral-color-background-hover:#B21807;
+    --slds-c-button-neutral-color-border:#B21807;
+    --slds-c-button-neutral-color-border-hover:#B21807;
+    --slds-c-button-text-color-active: black;
+    --slds-c-button-text-color-hover: white;
+}

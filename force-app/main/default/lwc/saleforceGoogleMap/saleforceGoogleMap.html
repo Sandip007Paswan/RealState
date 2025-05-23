@@ -1,0 +1,33 @@
+<!-- <template>
+    <div class="slds-m-around_medium">
+        <h1 class="slds-text-heading_medium">{markersTitle}</h1>
+        <p class="slds-text-body_regular">Office Locations</p>
+    </div>
+
+    <div class="map-container slds-m-around_medium">
+        <lightning-map
+            map-markers={mapMarkers}
+            markers-title={markersTitle}
+        ></lightning-map>
+    </div>
+
+    <template if:true={error}>
+        <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error">
+            <span class="slds-assistive-text">Error</span>
+            <h2>{error.body.message}</h2>
+        </div>
+    </template>
+</template> -->
+
+<template>
+    <div class="map-container slds-m-around_medium">
+        <lightning-map
+            map-markers={mapMarkers}
+            markers-title={markersTitle}
+            center={mapCenter}
+            zoom-level={initialZoomLevel}
+            onmarkerselect={handleMarkerSelect}
+            
+        ></lightning-map>
+    </div>
+</template>

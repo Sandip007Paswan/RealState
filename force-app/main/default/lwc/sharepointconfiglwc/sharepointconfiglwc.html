@@ -1,0 +1,58 @@
+<template>
+    <!-- lightning spinner -->
+    <template lwc:if={spinner}>
+        <div id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading...</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </template>
+    <lightning-card  title="SharePoint Configration">
+        <template lwc:if={handleEdits}>
+            <lightning-button variant="brand" label="Edit" title="Primary action" slot="actions" onclick={handleEdit} class="slds-m-left_x-small">
+            </lightning-button>
+        </template>
+        <template lwc:else>
+            <lightning-button label="Cancal" onclick={handleCancal} slot="actions"></lightning-button>
+            <lightning-button variant="brand" label="Save" title="Primary action" slot="actions" onclick={handleSave} class="slds-m-left_x-small">
+            </lightning-button>
+        </template>
+        <div class="slds-p-horizontal_small">
+            
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-textarea class="slds-var-m-around_small" name="input1" label="Client Id" value={details.Client_Id__c} onchange={input1} disabled={disabled} ></lightning-textarea>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-textarea class="slds-var-m-around_small" name="input2" label="Client Secret" value={details.Client_Secret__c} onchange={input2} disabled={disabled} ></lightning-textarea>
+                </div>
+
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-textarea class="slds-var-m-around_small" name="input3" label="EndPoint URL" value={details.EndPoint_Url__c} onchange={input3} disabled={disabled} ></lightning-textarea>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-textarea class="slds-var-m-around_small" name="input4" label="Grant Type" value={details.Grant_Type__c} onchange={input4} disabled={disabled} ></lightning-textarea>
+                </div>
+
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-textarea class="slds-var-m-around_small" name="input5" label="Parent Folder" value={details.Parent_Folder__c} onchange={input5} disabled={disabled} ></lightning-textarea>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-textarea class="slds-var-m-around_small" name="input6" label="Resource" value={details.Resource__c} onchange={input6} disabled={disabled} ></lightning-textarea>
+                </div>
+                
+
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-textarea class="slds-var-m-around_small" name="input7" label="Site Id" value={details.Site_ID__c} onchange={input7} disabled={disabled} ></lightning-textarea>
+                </div>
+
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-textarea class="slds-var-m-around_small" name="input8" label="Tenant Id" value={details.Tenant_Id__c} onchange={input8} disabled={disabled} ></lightning-textarea>
+                </div>
+            </div>  
+        </div>
+    </lightning-card>
+
+</template>

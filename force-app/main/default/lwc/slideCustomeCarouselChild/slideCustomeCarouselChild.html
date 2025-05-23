@@ -1,0 +1,52 @@
+<!-- <template>
+    <div class="slds_relative container">
+
+        <template for:each={slidesData} for:item="slide">
+            <div class={slide.cardClasses} key={slide.slideIndex}>
+                <div class="slds_Number">{slide.slideIndex}/{slidesData.length}</div>
+                <img src={slide.image}>
+                <div class="text-section slds-p-around_medium text_style">
+                    <h3 class="slds-text-heading_large">{slide.heading}</h3>
+                    <div class="slds-text-heading_small">{slide.description}</div>
+                </div>
+            </div>
+        </template>
+
+        
+
+        <a class="slds_prev" onclick={backSlide}>&#10094;</a>
+        <a class="slds_next" onclick={forwardSlide}>&#10095;</a>
+    </div>
+
+    <div class="slds-text-align_center slds-p-around_medium">
+        <template for:each={slidesData} for:item="slide">
+            <span class={slide.dotClasses} data-id={slide.slideIndex} key={slide.slideIndex} onclick={currentSlide}></span>
+        </template>
+    </div>
+</template> -->
+
+
+
+<template>
+    <div class="slds_relative container">
+        <template for:each={slidesData} for:item="slide">
+            <div class={slide.cardClasses} key={slide.slideIndex}>
+                <div class="slds_Number">{slide.slideIndex}/{slidesData.length}</div>
+                <img src={slide.image} key={slide.slideIndex} alt={slide.teacherName} />
+                <div class="text-section slds-p-around_medium text_style">
+                    <h3 class="slds-text-heading_large">{slide.teacherName}</h3>
+                    <div class="slds-text-heading_small">{slide.description}</div>
+                </div>
+            </div>
+        </template>
+
+        <a class="slds_prev" onclick={backSlide}>&#10094;</a>
+        <a class="slds_next" onclick={forwardSlide}>&#10095;</a>
+    </div>
+
+    <div class="slds-text-align_center slds-p-around_medium">
+        <template for:each={slidesData} for:item="slide">
+            <span class={slide.dotClasses} data-id={slide.slideIndex} key={slide.slideIndex} onclick={currentSlide}></span>
+        </template>
+    </div>
+</template>

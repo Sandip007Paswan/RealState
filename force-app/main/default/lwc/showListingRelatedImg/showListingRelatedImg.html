@@ -1,0 +1,116 @@
+<template>
+          
+
+    <template if:true={screen1}>
+        <lightning-card title="Filter Properties">
+            <div class="slds-grid slds-wrap">            
+                <div class="slds-col slds-size_1-of-6">
+                    <label for="propertyStatus">Filter by Property Status:</label>
+                    <div class="slds-form-element__control">
+                        <select id="propertyStatus" onchange={handleFilterChange} value={selectedFilter} class="slds-select custom-select">
+                            <option value="All">All</option>
+                            <option value="Active" selected>Active</option>
+                            <option value="Sold">Sold</option>
+                            <option value="Rented">Rented</option>
+                        </select>                        
+                    </div>
+                </div>
+                
+                <div class="slds-col slds-size_1-of-6">
+                    <label for="countrySearch">Search by Country:</label>
+                    
+                    <c-customlookupscreenlwc objectname="Country__c" filtering=false filterst="nochild" eventname="gocountry" ongocountry={countryChange}></c-customlookupscreenlwc>
+                
+                
+                    <label for="citySearch">Search by City:</label>
+
+                    <c-customlookupscreenlwc eventname="gocity" ongocity={cityChange} objectname="City__c" parentid={countryId} filtering=true filterst={childdt} filteringfield="State__r.Country__c" ></c-customlookupscreenlwc>
+                    
+                    
+                </div>
+
+                
+                <div class="slds-col slds-size_1-of-6">
+                    <label for="propertyType">Property Type:</label>
+                    <div class="slds-form-element__control">
+                        <template for:each={propertyTypes} for:item="type">
+                            <label key={type.value} class="slds-checkbox">
+                                <input type="checkbox" id={type.value} value={type.value} checked={type.checked} onchange={handlePropertyTypeChange} />
+                                <span class="slds-checkbox_faux"></span>
+                                <span>{type.label}</span>
+                            </label>
+                        </template>
+                    </div>
+                    
+                </div>
+                
+                <div class="slds-col slds-size_1-of-6">
+                    
+                    <label for="minBedrooms and minBathrooms">BedRooms & Bathrooms </label>
+                    <div class="slds-form-element__control">
+                        <div class="custom-dropdown">
+                            <input type="number" id="minBedrooms" oninput={handleMinBedroomsChange} placeholder="minBedrooms">
+                            <span class="divider">-</span>
+                            <input type="number" id="minBathrooms" oninput={handleMinBathroomsChange} placeholder="minBathrooms">
+                        </div>
+                    </div>
+
+                    <label for="priceRange">Price Range:</label>
+                    <div class="slds-form-element__control">
+                        <div class="custom-dropdown">
+                            <input class="price-input" type="number" id="minPrice" placeholder="Minimum Price" oninput={handleMinPriceChange}>
+                            <span class="divider">-</span>
+                            <input class="price-input" type="number" id="maxPrice" placeholder="Maximum Price" oninput={handleMaxPriceChange}>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </lightning-card>
+    </template>
+    <lightning-card >
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1">
+                <div class=" slds-m-around_medium" >
+                    <lightning-map 
+                        map-markers={mapMarkers}
+                        markers-title={markersTitle}
+                        center={mapCenter}
+                        zoom-level={initialZoomLevel}
+                        onmarkerselect={handleMarkerSelect}
+                        list-view="False"
+                        style="height: 20rem;">         
+                    </lightning-map>
+                </div>
+            </div>
+        </div>
+
+        <template if:true={screen2}>
+            <div style="position:relative;">
+                <c-listingdetailslwc record-id={selectedrecid} ongoback={ongoback} ></c-listingdetailslwc>
+            </div>   
+        </template>
+    
+        <template if:true={screen1}>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-1">
+                    <template if:true={recordsFound}>
+                        <div class="slds-grid slds-wrap" style="position:relative;">
+                            <div class="image-container">
+                                <template for:each={listingImages} for:item="listing">
+                                    <div key={listing.id} class="slds-col slds-size_2-of-12">
+                                        <c-dynamic-real-state-child  listing={listing} onselectedrecid={selectedlistingid}></c-dynamic-real-state-child>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </template>
+                        
+                    <template if:false={recordsFound}>  
+                        <p>No records found....Please Apply Another Filter</p>
+                    </template>
+                </div>
+            </div>
+        </template>
+    </lightning-card>
+  
+</template>

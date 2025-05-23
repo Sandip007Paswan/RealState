@@ -1,0 +1,28 @@
+<template>
+    <div class="slds-m-around_medium">
+        <label for="priceRange">Price Range:</label>
+        <div class="slds-form-element__control">
+            <div class="custom-dropdown">
+                <input class="price-input" type="number" value={minPrice} placeholder="Minimum Price" oninput={handleMinPriceChange}>
+                <span class="divider">-</span>
+                <input class="price-input" type="number" value={maxPrice} placeholder="Maximum Price" onchange={handleMaxPriceChange}>
+            </div>
+        </div>
+        <lightning-button label="Apply Filter" onclick={applyFilter} class="slds-m-top_medium"></lightning-button>
+    </div>
+
+    <div class="slds-m-around_medium">
+        <label for="minBedrooms">Bedrooms:</label>
+        <input type="number" id="minBedrooms" oninput={handleMinBedroomsChange} placeholder="Minimum Bedrooms">
+        <span class="divider">-</span>
+        <label for="minBathrooms">Bathrooms:</label>
+        <input type="number" id="minBathrooms" oninput={handleMinBathroomsChange} placeholder="Minimum Bathrooms">
+        <lightning-button label="Apply Filter" onclick={applyFilter} class="slds-m-top_medium"></lightning-button>
+    </div>
+
+    <div class="scrollable-container">
+        <template for:each={listingImages} for:item="listing">
+            <c-dynamic-real-state-child key={listing.id} listing={listing}></c-dynamic-real-state-child>
+        </template>
+    </div>
+</template>

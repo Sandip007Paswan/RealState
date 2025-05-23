@@ -1,0 +1,136 @@
+/* Add styles to show elements when needed */
+.show-dropdown .dropdown-content {
+    display: block;
+}
+
+.show-input .input-fields {
+    display: block;
+}
+
+.scrollable-container {
+    max-height: 535px; /* Set your desired max height */
+    overflow: auto; /* This makes the container scrollable if the content exceeds the height */
+}
+
+.slds-map:before {
+    
+}
+
+
+ /* General Styles */
+
+.amount {
+    font-weight: bold;
+    color: rgb(25, 26, 25);
+}
+
+/* Filter Properties Section */
+
+.slds-grid {
+    margin: 0;
+}
+
+.slds-col {
+    padding: 0 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.custom-dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.price-input {
+    width: 80px;
+}
+
+.slds-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.custom-button {
+    margin-top: 10px;
+}
+
+.slds-combobox_input-wraper {
+    position: relative;
+}
+
+.slds-input-has-icon .slds-input__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+}
+
+.slds-listbox {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.divider {
+    margin: 0 5px;
+}
+
+/* Property Listing Section */
+
+.prop-item {
+    margin-bottom: 20px;
+}
+
+.city-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.prop-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.amount {
+    font-size: 16px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.slds-grid span {
+    margin-right: 10px;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.image-item {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.prop-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Map Container and lightning-map */
+
+.map-container {
+    margin: 20px;
+}
+
+lightning-map {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #ddd;
+}
